@@ -37,6 +37,12 @@ npm install
 npm run dev
 ```
 
+Deploy a site with the repo-level helper:
+
+```bash
+python3 scripts/deploy_site.py maple-street-plumbing
+```
+
 That creates:
 
 ```
@@ -63,4 +69,4 @@ sites/active/maple-street-plumbing/
 - add shared content collections for testimonials and FAQs
 - add image optimization workflow
 - add contact-form integration patterns
-- add Cloudflare Pages deployment automation
+- add per-site domain metadata and deployment tracking
