@@ -5,5 +5,11 @@
   "email": "hello@demo-garage-doors.com",
   "cityState": "Your City, ST",
   "primaryColor": "#0f172a",
-  "accentColor": "#2563eb"
+  "accentColor": "#2563eb",
+  "description": "Demo Garage Doors serves Your City, ST with professional, reliable help.",
+  "serviceList": [
+    "Primary service",
+    "Secondary service",
+    "Emergency or premium service"
+  ]
 }

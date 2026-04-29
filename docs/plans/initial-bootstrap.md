@@ -4,9 +4,9 @@
 
 **Goal:** Build a reusable repo for managing many low-maintenance local-business brochure sites in parallel.
 
-**Architecture:** Use a multi-project repository with reusable templates, per-client site folders, lightweight helper scripts, and Cloudflare Pages deployment conventions. Keep the first version static-first so each site is easy to host and easy to hand off later.
+**Architecture:** Use a multi-project repository with reusable templates, per-client site folders, lightweight helper scripts, and Cloudflare Pages deployment conventions. Use Astro as the default template so the sites remain static-friendly while gaining reusable layouts and components.
 
-**Tech Stack:** GitHub, Cloudflare Pages, static HTML/CSS, Python helper scripts.
+**Tech Stack:** GitHub, Cloudflare Pages, Astro, Python helper scripts.
 
 ---
 
@@ -24,21 +24,25 @@
 - Confirm the README explains `templates/`, `sites/active/`, and `sites/archived/`
 - Confirm the docs explain why Cloudflare Pages is the default target
 
-### Task 2: Create a reusable brochure-site template
+### Task 2: Create a reusable Astro brochure-site template
 
-**Objective:** Provide a simple static template that can be reused for many businesses.
+**Objective:** Provide a simple Astro template that can be reused for many businesses.
 
 **Files:**
-- Create: `templates/brochure-site/index.html`
-- Create: `templates/brochure-site/services.html`
-- Create: `templates/brochure-site/about.html`
-- Create: `templates/brochure-site/contact.html`
-- Create: `templates/brochure-site/assets/styles.css`
+- Create: `templates/brochure-site/package.json`
+- Create: `templates/brochure-site/astro.config.mjs`
+- Create: `templates/brochure-site/src/pages/index.astro`
+- Create: `templates/brochure-site/src/pages/services.astro`
+- Create: `templates/brochure-site/src/pages/about.astro`
+- Create: `templates/brochure-site/src/pages/contact.astro`
+- Create: `templates/brochure-site/src/layouts/BaseLayout.astro`
+- Create: `templates/brochure-site/src/components/SiteHeader.astro`
+- Create: `templates/brochure-site/src/styles/global.css`
 - Create: `templates/brochure-site/site.json`
 
 **Verification:**
-- Open the template files and confirm placeholder values are obvious and easy to replace
-- Confirm the site is deployable as static files
+- Run `npm install && npm run build` inside a generated site
+- Confirm the generated site builds to static output in `dist/`
 
 ### Task 3: Add a site scaffolding helper
 
@@ -46,18 +50,19 @@
 
 **Files:**
 - Create: `scripts/new_site.py`
+- Create: `tests/test_astro_scaffold.py`
 
 **Verification:**
-- Run: `python3 scripts/new_site.py demo-site "Demo Site"`
-- Expected: `sites/active/demo-site/` exists and placeholders are replaced
+- Run: `python3 -m unittest tests.test_astro_scaffold -v`
+- Expected: PASS after the Astro template is in place
 
 ### Task 4: Document deployment conventions
 
-**Objective:** Capture how sites should be deployed to Cloudflare Pages.
+**Objective:** Capture how Astro sites should be deployed to Cloudflare Pages.
 
 **Files:**
 - Create: `infra/cloudflare/README.md`
 
 **Verification:**
 - Confirm the doc explains one Cloudflare Pages project per site folder
-- Confirm the doc names the expected publish directory strategy
+- Confirm the doc uses `npm run build` and `dist`

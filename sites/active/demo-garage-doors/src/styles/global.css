@@ -3,18 +3,28 @@
   --surface: #ffffff;
   --text: #0f172a;
   --muted: #475569;
+  --border: #e2e8f0;
   --primary: #0f172a;
   --accent: #2563eb;
-  --border: #e2e8f0;
 }
 
-* { box-sizing: border-box; }
-body {
-  margin: 0;
+* {
+  box-sizing: border-box;
+}
+
+html {
   font-family: Inter, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
+}
+
+body {
+  margin: 0;
   line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
 }
 
 .container {
@@ -27,29 +37,35 @@ header {
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
   gap: 1rem;
+  padding: 1rem 0;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   gap: 1rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
   flex-wrap: wrap;
 }
 
-nav a, .brand {
-  color: var(--text);
+nav a,
+.brand {
   text-decoration: none;
+  color: var(--text);
   font-weight: 600;
+}
+
+main {
+  min-height: 70vh;
 }
 
 .hero {
@@ -60,7 +76,7 @@ nav a, .brand {
 .hero h1 {
   font-size: clamp(2.25rem, 6vw, 4rem);
   line-height: 1.05;
-  margin-bottom: 1rem;
+  margin: 0.5rem 0 1rem;
 }
 
 .hero p {
@@ -90,13 +106,21 @@ nav a, .brand {
 }
 
 .button.secondary {
+  background: white;
   border-color: var(--border);
   color: var(--text);
-  background: white;
 }
 
 section {
   padding: 3rem 0;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--accent);
+  font-weight: 800;
 }
 
 .grid {
@@ -118,12 +142,4 @@ footer {
   background: #fff;
   padding: 2rem 0;
   color: var(--muted);
-}
-
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.8rem;
-  color: var(--accent);
-  font-weight: 800;
 }

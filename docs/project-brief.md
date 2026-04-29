@@ -11,7 +11,7 @@ Working assumptions from the source notes:
 - the workflow should support many parallel projects
 
 Recommended operating model:
-- build small static sites first
+- build small static or static-rendered Astro sites first
 - avoid full backends unless clearly necessary
 - use reusable templates and a per-client folder model
 - charge for setup plus maintenance rather than raw hosting

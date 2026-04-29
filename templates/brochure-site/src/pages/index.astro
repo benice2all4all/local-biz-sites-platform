@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../../site.json';
+---
+
+<BaseLayout title={`${site.businessName} | ${site.tagline}`}>
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Serving {site.cityState}</div>
+      <h1>{site.tagline}</h1>
+      <p>{site.description}</p>
+      <div class="actions">
+        <a class="button primary" href={`tel:${site.phone}`}>Call {site.phone}</a>
+        <a class="button secondary" href="/contact">Request a quote</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="grid">
+        <article class="card">
+          <h2>Fast estimates</h2>
+          <p>Use this block for your core promise and how you make it easy to get started.</p>
+        </article>
+        <article class="card">
+          <h2>Trusted locally</h2>
+          <p>Use this area for social proof, years in business, licenses, or guarantees.</p>
+        </article>
+        <article class="card">
+          <h2>Simple contact options</h2>
+          <p>Direct phone, email, and form access work well for brochure-style local business sites.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

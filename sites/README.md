@@ -1,6 +1,6 @@
 # Sites
 
-`sites/active/` is for current in-progress or live client sites.
+`sites/active/` is for current in-progress or live client Astro sites.
 
 `sites/archived/` is for paused, retired, or handed-off sites.
 

@@ -12,13 +12,13 @@ This repo is a platform/workbench for many small local-business websites, not ju
 - `shared/` holds reusable copy snippets, brand tokens, and common assets
 - `infra/cloudflare/` documents deployment conventions
 
-## Why static first
+## Why Astro
 
-Static brochure sites are a good default because they are:
-- cheap to host
-- easy to cache globally
-- low maintenance
-- easy to transfer into a dedicated repo later
+Astro is the default because it gives us:
+- component reuse across many brochure sites
+- static output for cheap hosting
+- easy content editing with plain files
+- a clean path to incremental complexity later
 
 ## Deployment model
 

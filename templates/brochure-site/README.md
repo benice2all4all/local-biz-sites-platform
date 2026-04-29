@@ -1,6 +1,6 @@
 # Brochure site template
 
-This is the default low-maintenance template for local business websites.
+This is the default Astro template for low-maintenance local business websites.
 
 Replace placeholder values such as:
 - `__BUSINESS_NAME__`
@@ -9,4 +9,12 @@ Replace placeholder values such as:
 - `__EMAIL__`
 - `__CITY_STATE__`
 
-Files in this template are plain static assets so they can deploy directly to Cloudflare Pages.
+Typical workflow:
+
+```bash
+npm install
+npm run dev
+npm run build
+```
+
+The template uses static output so it deploys cleanly to Cloudflare Pages.

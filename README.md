@@ -5,8 +5,8 @@ A multi-project starter repo for building and managing simple brochure websites 
 Default opinionated stack:
 - GitHub for source control
 - Cloudflare Pages for hosting
-- static HTML/CSS-first brochure sites for low maintenance
-- one reusable template plus per-client site folders
+- Astro for reusable static brochure sites
+- one reusable Astro template plus per-client site folders
 
 Why this repo exists:
 - keep many small projects organized at the same time
@@ -28,10 +28,13 @@ sites/archived/        completed or retired sites
 
 ## Quick start
 
-Create a new site from the default brochure template:
+Create a new Astro site from the default brochure template:
 
 ```bash
 python3 scripts/new_site.py maple-street-plumbing "Maple Street Plumbing"
+cd sites/active/maple-street-plumbing
+npm install
+npm run dev
 ```
 
 That creates:
@@ -43,21 +46,21 @@ sites/active/maple-street-plumbing/
 ## Recommended workflow
 
 1. Start each business site in `sites/active/<slug>/`
-2. Customize copy, colors, images, and contact details
+2. Customize `site.json`, page copy, colors, images, and contact details
 3. Deploy each site to its own Cloudflare Pages project
 4. If a client needs full ownership later, move that folder into its own repo
 5. Archive inactive work under `sites/archived/`
 
 ## Initial defaults
 
-- simple brochure-site pages: home, services, about, contact
-- static-first approach to reduce maintenance and hosting cost
+- Astro-based brochure-site pages: home, services, about, contact
+- static output for low maintenance and cheap hosting
 - custom-domain-friendly deployment via Cloudflare Pages
 - lightweight structure for parallel client work
 
 ## Next steps
 
-- add Astro-based template when you want component reuse
+- add shared content collections for testimonials and FAQs
 - add image optimization workflow
-- add content intake forms per client
-- add a deployment helper for Cloudflare Pages
+- add contact-form integration patterns
+- add Cloudflare Pages deployment automation

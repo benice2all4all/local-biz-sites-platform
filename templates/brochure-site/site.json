@@ -5,5 +5,11 @@
   "email": "__EMAIL__",
   "cityState": "__CITY_STATE__",
   "primaryColor": "#0f172a",
-  "accentColor": "#2563eb"
+  "accentColor": "#2563eb",
+  "description": "__BUSINESS_NAME__ serves __CITY_STATE__ with professional, reliable help.",
+  "serviceList": [
+    "Primary service",
+    "Secondary service",
+    "Emergency or premium service"
+  ]
 }

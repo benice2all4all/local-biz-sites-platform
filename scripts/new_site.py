@@ -21,7 +21,7 @@ def slugify(text: str) -> str:
     return ''.join(out).strip('-') or 'new-site'
 
 def replace_tokens(path: Path, replacements: dict[str, str]) -> None:
-    if path.suffix.lower() not in {'.html', '.css', '.json', '.md', '.txt'}:
+    if path.suffix.lower() not in {'.astro', '.css', '.json', '.md', '.txt', '.mjs'} and path.name != 'package.json':
         return
     text = path.read_text(encoding='utf-8')
     for key, value in replacements.items():
@@ -43,6 +43,7 @@ def main() -> int:
 
     shutil.copytree(TEMPLATE, target)
     replacements = {
+        '__SITE_SLUG__': slug,
         '__BUSINESS_NAME__': business_name,
         '__TAGLINE__': f'{business_name} done right',
         '__PHONE__': '(555) 555-0100',

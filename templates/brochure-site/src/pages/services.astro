@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../../site.json';
+---
+
+<BaseLayout title={`Services | ${site.businessName}`}>
+  <section>
+    <div class="container">
+      <div class="eyebrow">Services</div>
+      <h1>What {site.businessName} offers</h1>
+      <div class="grid">
+        {site.serviceList.map((service) => (
+          <article class="card">
+            <h2>{service}</h2>
+            <p>Describe this service in clear customer-friendly language.</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
