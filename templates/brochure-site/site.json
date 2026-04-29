@@ -1,0 +1,9 @@
+{
+  "businessName": "__BUSINESS_NAME__",
+  "tagline": "__TAGLINE__",
+  "phone": "__PHONE__",
+  "email": "__EMAIL__",
+  "cityState": "__CITY_STATE__",
+  "primaryColor": "#0f172a",
+  "accentColor": "#2563eb"
+}
