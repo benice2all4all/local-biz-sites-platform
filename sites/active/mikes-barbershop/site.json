@@ -15,25 +15,25 @@
   "hoursNote": "Call for today's availability and walk-in timing.",
   "logoImage": "/images/logo.svg",
   "logoImageAlt": "Mike's Barbershop logo mark",
-  "heroImage": "/images/hero.svg",
-  "heroImageAlt": "Illustrated barbershop hero artwork for Mike's Barbershop",
-  "featureImage": "/images/feature.svg",
-  "featureImageAlt": "Illustrated barbershop feature artwork for Mike's Barbershop",
+  "heroImage": "/images/commons/gallery2.jpg",
+  "heroImageAlt": "Historic barbershop scene with barbers and customers",
+  "featureImage": "/images/commons/hero.jpg",
+  "featureImageAlt": "Vintage barbershop interior display and barber chairs",
   "galleryImages": [
     {
-      "src": "/images/gallery-1.svg",
-      "alt": "Mike's Barbershop storefront or front-chair visual",
-      "caption": "Storefront or front-chair visual"
+      "src": "/images/commons/gallery2.jpg",
+      "alt": "Historic barbershop scene with barbers and customers",
+      "caption": "Temporary public-source stand-in for a real haircut-in-progress photo"
     },
     {
-      "src": "/images/gallery-2.svg",
-      "alt": "Mike's Barbershop cut detail or beard trim visual",
-      "caption": "Cut detail or beard trim visual"
+      "src": "/images/commons/hero.jpg",
+      "alt": "Vintage barbershop interior display and barber chairs",
+      "caption": "Temporary public-source stand-in for a shop interior or storefront visual"
     },
     {
-      "src": "/images/gallery-3.svg",
-      "alt": "Mike's Barbershop interior and shop vibe visual",
-      "caption": "Interior and neighborhood vibe visual"
+      "src": "/images/commons/feature.jpg",
+      "alt": "Historic black and white barbershop interior",
+      "caption": "Temporary public-source stand-in for heritage, atmosphere, or craftsmanship imagery"
     }
   ],
   "highlights": [
