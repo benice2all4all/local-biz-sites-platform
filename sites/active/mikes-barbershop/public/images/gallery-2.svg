@@ -1,0 +1,12 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="m2" x1="80" y1="70" x2="830" y2="630" gradientUnits="userSpaceOnUse"><stop stop-color="#33261D"/><stop offset="1" stop-color="#C59D5F"/></linearGradient></defs>
+  <rect width="900" height="700" rx="34" fill="url(#m2)"/>
+  <rect x="104" y="108" width="692" height="484" rx="28" fill="#FFF7ED" fill-opacity="0.1" stroke="#F8E7CC" stroke-opacity="0.2" stroke-width="2"/>
+  <circle cx="286" cy="284" r="112" fill="#FFF7ED" fill-opacity="0.16"/>
+  <rect x="458" y="178" width="224" height="22" rx="11" fill="#F8E7CC" fill-opacity="0.3"/>
+  <rect x="458" y="220" width="208" height="62" rx="18" fill="#FFF7ED" fill-opacity="0.92"/>
+  <rect x="458" y="334" width="228" height="18" rx="9" fill="#F8E7CC" fill-opacity="0.18"/>
+  <rect x="458" y="368" width="186" height="18" rx="9" fill="#F8E7CC" fill-opacity="0.14"/>
+  <text x="104" y="628" fill="#FFF7ED" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Cut detail / beard trim image slot</text>
+  <text x="104" y="668" fill="#F8E7CC" font-family="Arial, Helvetica, sans-serif" font-size="22">Use for fades, beard work, hot towel shave, or close-up craftsmanship shots.</text>
+</svg>

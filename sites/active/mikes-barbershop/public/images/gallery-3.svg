@@ -1,0 +1,11 @@
+<svg width="900" height="700" viewBox="0 0 900 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="m3" x1="70" y1="60" x2="836" y2="636" gradientUnits="userSpaceOnUse"><stop stop-color="#171717"/><stop offset="0.55" stop-color="#45311F"/><stop offset="1" stop-color="#A87846"/></linearGradient></defs>
+  <rect width="900" height="700" rx="34" fill="url(#m3)"/>
+  <rect x="106" y="102" width="688" height="496" rx="28" fill="#FFF7ED" fill-opacity="0.1" stroke="#F8E7CC" stroke-opacity="0.16" stroke-width="2"/>
+  <rect x="160" y="160" width="576" height="196" rx="26" fill="#FFF7ED" fill-opacity="0.14"/>
+  <rect x="160" y="400" width="166" height="140" rx="22" fill="#FFF7ED" fill-opacity="0.16"/>
+  <rect x="364" y="400" width="166" height="140" rx="22" fill="#FFF7ED" fill-opacity="0.12"/>
+  <rect x="568" y="400" width="166" height="140" rx="22" fill="#FFF7ED" fill-opacity="0.18"/>
+  <text x="106" y="628" fill="#FFF7ED" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Interior / vibe image slot</text>
+  <text x="106" y="668" fill="#F8E7CC" font-family="Arial, Helvetica, sans-serif" font-size="22">Use for the shop atmosphere, chairs, mirrors, coffee, or neighborhood feel.</text>
+</svg>

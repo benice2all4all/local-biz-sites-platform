@@ -13,6 +13,29 @@
   "directionsUrl": "https://www.google.com/maps/search/?api=1&query=300+N+Happ+Rd+Unit+114,+Northfield,+IL+60093",
   "instagramUrl": "https://www.instagram.com/barbershop.mike/",
   "hoursNote": "Call for today's availability and walk-in timing.",
+  "logoImage": "/images/logo.svg",
+  "logoImageAlt": "Mike's Barbershop logo mark",
+  "heroImage": "/images/hero.svg",
+  "heroImageAlt": "Illustrated barbershop hero artwork for Mike's Barbershop",
+  "featureImage": "/images/feature.svg",
+  "featureImageAlt": "Illustrated barbershop feature artwork for Mike's Barbershop",
+  "galleryImages": [
+    {
+      "src": "/images/gallery-1.svg",
+      "alt": "Mike's Barbershop storefront or front-chair visual",
+      "caption": "Storefront or front-chair visual"
+    },
+    {
+      "src": "/images/gallery-2.svg",
+      "alt": "Mike's Barbershop cut detail or beard trim visual",
+      "caption": "Cut detail or beard trim visual"
+    },
+    {
+      "src": "/images/gallery-3.svg",
+      "alt": "Mike's Barbershop interior and shop vibe visual",
+      "caption": "Interior and neighborhood vibe visual"
+    }
+  ],
   "highlights": [
     "Good for kids",
     "Restroom available",

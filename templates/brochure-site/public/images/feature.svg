@@ -1,0 +1,20 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="100" y1="60" x2="1110" y2="870" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="0.5" stop-color="#334155"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="36" fill="url(#bg2)"/>
+  <rect x="110" y="110" width="980" height="680" rx="32" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="2"/>
+  <rect x="180" y="180" width="430" height="430" rx="26" fill="#FFFFFF" fill-opacity="0.12"/>
+  <rect x="660" y="182" width="280" height="22" rx="11" fill="#FFFFFF" fill-opacity="0.34"/>
+  <rect x="660" y="228" width="240" height="66" rx="18" fill="#FFFFFF" fill-opacity="0.94"/>
+  <rect x="660" y="336" width="312" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.24"/>
+  <rect x="660" y="372" width="262" height="18" rx="9" fill="#FFFFFF" fill-opacity="0.18"/>
+  <rect x="660" y="448" width="330" height="114" rx="24" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="660" y="275" fill="#111827" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="700">__BUSINESS_NAME__</text>
+  <text x="180" y="682" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">Replace with a team, product, storefront, or service image.</text>
+  <text x="180" y="722" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="20">This slot keeps every site visually rich even before final photography arrives.</text>
+</svg>

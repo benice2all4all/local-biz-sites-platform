@@ -5,32 +5,84 @@ import site from '../../site.json';
 
 <BaseLayout title={`${site.businessName} | ${site.tagline}`}>
   <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Serving {site.cityState}</div>
+        <h1>{site.tagline}</h1>
+        <p>{site.description}</p>
+        <div class="actions">
+          <a class="button primary" href={`tel:${site.phone}`}>Call {site.phone}</a>
+          <a class="button secondary" href="/contact">Contact us</a>
+        </div>
+      </div>
+      <div class="media-card hero-visual">
+        <img src={site.heroImage} alt={site.heroImageAlt} loading="eager" />
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container feature-grid">
+      <div>
+        <div class="section-heading">
+          <div class="eyebrow">Why people choose {site.businessName}</div>
+          <h2>A stronger local-business site from day one</h2>
+          <p>
+            This template includes reusable visual sections, clear calls to action, and flexible image slots
+            so every new site starts polished instead of plain.
+          </p>
+        </div>
+        <div class="grid compact-grid">
+          <article class="card">
+            <h3>Clear contact paths</h3>
+            <p>Make calling, visiting, and taking the next step obvious on both desktop and mobile.</p>
+          </article>
+          <article class="card">
+            <h3>Flexible branding</h3>
+            <p>Swap placeholder visuals for business photos, service images, storefront shots, or social content.</p>
+          </article>
+        </div>
+      </div>
+      <div class="media-card feature-visual">
+        <img src={site.featureImage} alt={site.featureImageAlt} loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-muted">
     <div class="container">
-      <div class="eyebrow">Serving {site.cityState}</div>
-      <h1>{site.tagline}</h1>
-      <p>{site.description}</p>
-      <div class="actions">
-        <a class="button primary" href={`tel:${site.phone}`}>Call {site.phone}</a>
-        <a class="button secondary" href="/contact">Request a quote</a>
+      <div class="section-heading">
+        <div class="eyebrow">Services</div>
+        <h2>Highlight the work that matters most</h2>
+      </div>
+      <div class="grid">
+        {site.serviceList.map((service) => (
+          <article class="card">
+            <h3>{service}</h3>
+            <p>Use this block to describe the service in simple, customer-friendly language.</p>
+          </article>
+        ))}
       </div>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <div class="grid">
-        <article class="card">
-          <h2>Fast estimates</h2>
-          <p>Use this block for your core promise and how you make it easy to get started.</p>
-        </article>
-        <article class="card">
-          <h2>Trusted locally</h2>
-          <p>Use this area for social proof, years in business, licenses, or guarantees.</p>
-        </article>
-        <article class="card">
-          <h2>Simple contact options</h2>
-          <p>Direct phone, email, and form access work well for brochure-style local business sites.</p>
-        </article>
+      <div class="section-heading">
+        <div class="eyebrow">Gallery</div>
+        <h2>Standard visual slots you can replace fast</h2>
+        <p>
+          Every site starts with a hero, supporting image, and three reusable gallery positions for proof,
+          personality, and service visuals.
+        </p>
+      </div>
+      <div class="gallery-grid">
+        {site.galleryImages.map((image) => (
+          <figure class="media-card gallery-card">
+            <img src={image.src} alt={image.alt} loading="lazy" />
+            <figcaption>{image.caption}</figcaption>
+          </figure>
+        ))}
       </div>
     </div>
   </section>

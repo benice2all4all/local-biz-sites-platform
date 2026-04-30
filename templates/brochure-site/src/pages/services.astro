@@ -5,16 +5,27 @@ import site from '../../site.json';
 
 <BaseLayout title={`Services | ${site.businessName}`}>
   <section>
-    <div class="container">
-      <div class="eyebrow">Services</div>
-      <h1>What {site.businessName} offers</h1>
-      <div class="grid">
-        {site.serviceList.map((service) => (
-          <article class="card">
-            <h2>{service}</h2>
-            <p>Describe this service in clear customer-friendly language.</p>
-          </article>
-        ))}
+    <div class="container feature-grid">
+      <div>
+        <div class="section-heading">
+          <div class="eyebrow">Services</div>
+          <h1>What {site.businessName} offers</h1>
+          <p>
+            Use this page to explain each core service in clear language and help visitors quickly understand
+            which option fits their needs.
+          </p>
+        </div>
+        <div class="grid">
+          {site.serviceList.map((service) => (
+            <article class="card">
+              <h2>{service}</h2>
+              <p>Describe the value, process, and result for this service in one or two short paragraphs.</p>
+            </article>
+          ))}
+        </div>
+      </div>
+      <div class="media-card feature-visual">
+        <img src={site.featureImage} alt={site.featureImageAlt} loading="lazy" />
       </div>
     </div>
   </section>

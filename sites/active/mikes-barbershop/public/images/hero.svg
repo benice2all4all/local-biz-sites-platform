@@ -1,0 +1,29 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="90" y1="70" x2="1490" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#161616"/>
+      <stop offset="0.5" stop-color="#33261D"/>
+      <stop offset="1" stop-color="#8B5E34"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" rx="44" fill="url(#bg)"/>
+  <rect x="140" y="160" width="1320" height="680" rx="34" fill="#FFF7ED" fill-opacity="0.08" stroke="#FCD9B0" stroke-opacity="0.22" stroke-width="2"/>
+  <circle cx="1230" cy="265" r="172" fill="#F6E7CF" fill-opacity="0.08"/>
+  <rect x="240" y="240" width="520" height="24" rx="12" fill="#F8E7CC" fill-opacity="0.38"/>
+  <rect x="240" y="304" width="720" height="92" rx="18" fill="#FFF7ED" fill-opacity="0.94"/>
+  <rect x="240" y="426" width="620" height="24" rx="12" fill="#F8E7CC" fill-opacity="0.28"/>
+  <rect x="240" y="470" width="540" height="24" rx="12" fill="#F8E7CC" fill-opacity="0.16"/>
+  <rect x="240" y="560" width="210" height="62" rx="31" fill="#C59D5F"/>
+  <rect x="476" y="560" width="236" height="62" rx="31" fill="#FFF7ED" fill-opacity="0.12" stroke="#F8E7CC" stroke-opacity="0.4"/>
+  <rect x="1030" y="266" width="230" height="410" rx="30" fill="#FFF7ED" fill-opacity="0.1" stroke="#F8E7CC" stroke-opacity="0.2"/>
+  <rect x="1083" y="318" width="124" height="124" rx="62" fill="#F8E7CC"/>
+  <rect x="1112" y="448" width="68" height="176" rx="22" fill="#C59D5F"/>
+  <rect x="1056" y="706" width="280" height="74" rx="24" fill="#FFF7ED" fill-opacity="0.12"/>
+  <rect x="1322" y="206" width="70" height="420" rx="28" fill="#F8E7CC" fill-opacity="0.12"/>
+  <rect x="1336" y="228" width="14" height="376" rx="7" fill="#D92626"/>
+  <rect x="1354" y="228" width="14" height="376" rx="7" fill="#F8E7CC"/>
+  <rect x="1372" y="228" width="14" height="376" rx="7" fill="#2563EB"/>
+  <text x="240" y="369" fill="#171717" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700">Mike's Barbershop</text>
+  <text x="240" y="732" fill="#FFF7ED" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700">Classic shop energy with a modern, polished feel.</text>
+  <text x="240" y="774" fill="#F8E7CC" font-family="Arial, Helvetica, sans-serif" font-size="22">Use this hero slot for real barbershop photos later — storefront, chair, team, or fresh cuts.</text>
+</svg>

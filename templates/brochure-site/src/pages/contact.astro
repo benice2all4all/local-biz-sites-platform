@@ -5,22 +5,32 @@ import site from '../../site.json';
 
 <BaseLayout title={`Contact | ${site.businessName}`}>
   <section>
-    <div class="container">
-      <div class="eyebrow">Contact</div>
-      <h1>Get in touch</h1>
-      <div class="grid">
-        <article class="card">
-          <h2>Call</h2>
-          <p><a href={`tel:${site.phone}`}>{site.phone}</a></p>
-        </article>
-        <article class="card">
-          <h2>Email</h2>
-          <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
-        </article>
-        <article class="card">
-          <h2>Service area</h2>
-          <p>{site.cityState}</p>
-        </article>
+    <div class="container feature-grid">
+      <div>
+        <div class="section-heading">
+          <div class="eyebrow">Contact</div>
+          <h1>Get in touch</h1>
+          <p>Make it easy for customers to call, email, or ask the next question.</p>
+        </div>
+        <div class="grid contact-grid">
+          <article class="card">
+            <h2>Call</h2>
+            <p><a href={`tel:${site.phone}`}>{site.phone}</a></p>
+          </article>
+          {site.email && (
+            <article class="card">
+              <h2>Email</h2>
+              <p><a href={`mailto:${site.email}`}>{site.email}</a></p>
+            </article>
+          )}
+          <article class="card">
+            <h2>Service area</h2>
+            <p>{site.cityState}</p>
+          </article>
+        </div>
+      </div>
+      <div class="media-card feature-visual">
+        <img src={site.featureImage} alt={site.featureImageAlt} loading="lazy" />
       </div>
     </div>
   </section>

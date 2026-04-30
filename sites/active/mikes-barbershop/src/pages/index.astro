@@ -16,20 +16,43 @@ import site from '../../site.json';
         </div>
         <p class="hero-note">{site.locationNote} · {site.address}</p>
       </div>
-      <aside class="card spotlight-card">
-        <div class="eyebrow">Why locals choose Mike's</div>
-        <h2>Relaxed vibe. Sharp results.</h2>
-        <p>{site.googleReviewSummary}</p>
-        <ul class="check-list">
-          {site.highlights.map((highlight) => (
-            <li>{highlight}</li>
-          ))}
-        </ul>
-      </aside>
+      <div class="media-card hero-visual">
+        <img src={site.heroImage} alt={site.heroImageAlt} loading="eager" />
+      </div>
     </div>
   </section>
 
   <section>
+    <div class="container feature-grid">
+      <div>
+        <div class="section-heading">
+          <div class="eyebrow">Why locals choose Mike's</div>
+          <h2>Relaxed vibe. Sharp results.</h2>
+          <p>{site.googleReviewSummary}</p>
+        </div>
+        <ul class="check-list inline-checks">
+          {site.highlights.map((highlight) => (
+            <li>{highlight}</li>
+          ))}
+        </ul>
+        <div class="grid compact-grid">
+          <article class="card">
+            <h3>Neighborhood feel</h3>
+            <p>Clients mention the mellow vibe, fresh coffee, and being treated like family from the moment they walk in.</p>
+          </article>
+          <article class="card">
+            <h3>Sharp barbering</h3>
+            <p>From classic cuts to fades and beard work, the site now visually reinforces the premium barbershop experience.</p>
+          </article>
+        </div>
+      </div>
+      <div class="media-card feature-visual">
+        <img src={site.featureImage} alt={site.featureImageAlt} loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section-muted">
     <div class="container">
       <div class="section-heading">
         <div class="eyebrow">Services</div>
@@ -46,7 +69,28 @@ import site from '../../site.json';
     </div>
   </section>
 
-  <section class="section-muted">
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Gallery</div>
+        <h2>Planned image slots for the real photo upgrade</h2>
+        <p>
+          The site now includes dedicated gallery positions we can swap later for real haircut shots,
+          beard-trim closeups, shop interior photography, or storefront images.
+        </p>
+      </div>
+      <div class="gallery-grid">
+        {site.galleryImages.map((image) => (
+          <figure class="media-card gallery-card">
+            <img src={image.src} alt={image.alt} loading="lazy" />
+            <figcaption>{image.caption}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
     <div class="container">
       <div class="section-heading">
         <div class="eyebrow">Reviews</div>
@@ -63,7 +107,7 @@ import site from '../../site.json';
     </div>
   </section>
 
-  <section>
+  <section class="section-muted">
     <div class="container info-strip">
       <article class="card">
         <div class="eyebrow">Visit</div>

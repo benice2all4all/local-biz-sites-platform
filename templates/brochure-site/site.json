@@ -7,6 +7,29 @@
   "primaryColor": "#0f172a",
   "accentColor": "#2563eb",
   "description": "__BUSINESS_NAME__ serves __CITY_STATE__ with professional, reliable help.",
+  "logoImage": "/images/logo.svg",
+  "logoImageAlt": "__BUSINESS_NAME__ logo mark",
+  "heroImage": "/images/hero.svg",
+  "heroImageAlt": "__BUSINESS_NAME__ feature image",
+  "featureImage": "/images/feature.svg",
+  "featureImageAlt": "__BUSINESS_NAME__ supporting image",
+  "galleryImages": [
+    {
+      "src": "/images/gallery-1.svg",
+      "alt": "__BUSINESS_NAME__ gallery image 1",
+      "caption": "Frontline visual"
+    },
+    {
+      "src": "/images/gallery-2.svg",
+      "alt": "__BUSINESS_NAME__ gallery image 2",
+      "caption": "Story visual"
+    },
+    {
+      "src": "/images/gallery-3.svg",
+      "alt": "__BUSINESS_NAME__ gallery image 3",
+      "caption": "Proof visual"
+    }
+  ],
   "serviceList": [
     "Primary service",
     "Secondary service",

@@ -21,7 +21,7 @@ def slugify(text: str) -> str:
     return ''.join(out).strip('-') or 'new-site'
 
 def replace_tokens(path: Path, replacements: dict[str, str]) -> None:
-    if path.suffix.lower() not in {'.astro', '.css', '.json', '.md', '.txt', '.mjs'} and path.name != 'package.json':
+    if path.suffix.lower() not in {'.astro', '.css', '.json', '.md', '.txt', '.mjs', '.svg'} and path.name != 'package.json':
         return
     text = path.read_text(encoding='utf-8')
     for key, value in replacements.items():

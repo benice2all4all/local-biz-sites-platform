@@ -1,11 +1,14 @@
 ---
-const { businessName, phone } = Astro.props;
+const { businessName, phone, logoImage, logoImageAlt } = Astro.props;
 ---
 
 <header>
   <div class="container">
     <nav>
-      <a class="brand" href="/">{businessName}</a>
+      <a class="brand brand-with-logo" href="/">
+        <img src={logoImage} alt={logoImageAlt} class="brand-logo" loading="eager" />
+        <span>{businessName}</span>
+      </a>
       <ul>
         <li><a href="/services">Services</a></li>
         <li><a href="/about">About</a></li>

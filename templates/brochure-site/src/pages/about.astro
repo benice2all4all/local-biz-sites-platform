@@ -5,14 +5,23 @@ import site from '../../site.json';
 
 <BaseLayout title={`About | ${site.businessName}`}>
   <section>
-    <div class="container">
-      <div class="eyebrow">About</div>
-      <h1>Meet {site.businessName}</h1>
-      <div class="card">
-        <p>
-          Tell the story of the business, the owner, the service area, and why customers trust you.
-          Keep this page simple, direct, and local.
-        </p>
+    <div class="container feature-grid">
+      <div>
+        <div class="section-heading">
+          <div class="eyebrow">About</div>
+          <h1>Meet {site.businessName}</h1>
+          <p>
+            Tell the story of the business, the owner, the local area, and why customers trust the work.
+            Keep it simple, direct, and human.
+          </p>
+          <p>
+            This visual layout gives you room for a real image of the team, workspace, storefront, or product
+            instead of relying only on text.
+          </p>
+        </div>
+      </div>
+      <div class="media-card feature-visual">
+        <img src={site.heroImage} alt={site.heroImageAlt} loading="lazy" />
       </div>
     </div>
   </section>

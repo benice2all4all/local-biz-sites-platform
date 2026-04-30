@@ -26,14 +26,31 @@ const { title, description = site.description } = Astro.props;
     </style>
   </head>
   <body>
-    <SiteHeader businessName={site.businessName} />
+    <SiteHeader
+      businessName={site.businessName}
+      phone={site.phone}
+      logoImage={site.logoImage}
+      logoImageAlt={site.logoImageAlt}
+    />
     <main>
       <slot />
     </main>
     <footer>
-      <div class="container">
-        <strong>{site.businessName}</strong><br />
-        {site.cityState} · <a href={`tel:${site.phone}`}>{site.phone}</a> · <a href={`mailto:${site.email}`}>{site.email}</a>
+      <div class="container footer-grid">
+        <div>
+          <strong>{site.businessName}</strong><br />
+          {site.cityState}
+        </div>
+        <div>
+          <strong>Call</strong><br />
+          <a href={`tel:${site.phone}`}>{site.phone}</a>
+        </div>
+        {site.email && (
+          <div>
+            <strong>Email</strong><br />
+            <a href={`mailto:${site.email}`}>{site.email}</a>
+          </div>
+        )}
       </div>
     </footer>
   </body>

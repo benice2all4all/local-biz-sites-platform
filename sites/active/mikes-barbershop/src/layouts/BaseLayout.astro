@@ -26,7 +26,12 @@ const { title, description = site.description } = Astro.props;
     </style>
   </head>
   <body>
-    <SiteHeader businessName={site.businessName} phone={site.phone} />
+    <SiteHeader
+      businessName={site.businessName}
+      phone={site.phone}
+      logoImage={site.logoImage}
+      logoImageAlt={site.logoImageAlt}
+    />
     <main>
       <slot />
     </main>
