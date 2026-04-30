@@ -1,0 +1,17 @@
+---
+const { businessName, phone } = Astro.props;
+---
+
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="/">{businessName}</a>
+      <ul>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+      <a class="button nav-cta" href={`tel:${phone}`}>Call now</a>
+    </nav>
+  </div>
+</header>

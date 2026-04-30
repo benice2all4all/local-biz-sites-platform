@@ -1,0 +1,50 @@
+---
+import SiteHeader from '../components/SiteHeader.astro';
+import '../styles/global.css';
+import site from '../../site.json';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = site.description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <style define:vars={{ primary: site.primaryColor, accent: site.accentColor }}>
+      :root {
+        --primary: var(--primary, #171717);
+        --accent: var(--accent, #c59d5f);
+      }
+    </style>
+  </head>
+  <body>
+    <SiteHeader businessName={site.businessName} phone={site.phone} />
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <strong>{site.businessName}</strong><br />
+          {site.cityState}
+        </div>
+        <div>
+          <strong>Visit</strong><br />
+          {site.address}
+        </div>
+        <div>
+          <strong>Call</strong><br />
+          <a href={`tel:${site.phone}`}>{site.phone}</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

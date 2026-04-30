@@ -1,0 +1,88 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../../site.json';
+---
+
+<BaseLayout title={`${site.businessName} | Northfield Barber Shop`}>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">Barbershop in Northfield, Illinois</div>
+        <h1>{site.tagline}</h1>
+        <p>{site.description}</p>
+        <div class="actions">
+          <a class="button primary" href={`tel:${site.phone}`}>Call {site.phone}</a>
+          <a class="button secondary" href={site.directionsUrl} target="_blank" rel="noreferrer">{site.directionsLabel}</a>
+        </div>
+        <p class="hero-note">{site.locationNote} · {site.address}</p>
+      </div>
+      <aside class="card spotlight-card">
+        <div class="eyebrow">Why locals choose Mike's</div>
+        <h2>Relaxed vibe. Sharp results.</h2>
+        <p>{site.googleReviewSummary}</p>
+        <ul class="check-list">
+          {site.highlights.map((highlight) => (
+            <li>{highlight}</li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Services</div>
+        <h2>Barbering built around quality and comfort</h2>
+      </div>
+      <div class="grid">
+        {site.serviceList.map((service) => (
+          <article class="card">
+            <h3>{service}</h3>
+            <p>Clean, professional barbering with careful attention to detail and a comfortable in-shop experience.</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-muted">
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Reviews</div>
+        <h2>Neighborhood word-of-mouth that speaks for itself</h2>
+      </div>
+      <div class="grid reviews-grid">
+        {site.reviews.map((review) => (
+          <article class="card review-card">
+            <p>“{review.quote}”</p>
+            <strong>— {review.author}</strong>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container info-strip">
+      <article class="card">
+        <div class="eyebrow">Visit</div>
+        <h3>{site.locationNote}</h3>
+        <p>{site.address}</p>
+        <a href={site.directionsUrl} target="_blank" rel="noreferrer">Get directions</a>
+      </article>
+      <article class="card">
+        <div class="eyebrow">Call</div>
+        <h3>Book or check walk-in timing</h3>
+        <p>{site.hoursNote}</p>
+        <a href={`tel:${site.phone}`}>{site.phone}</a>
+      </article>
+      <article class="card">
+        <div class="eyebrow">Instagram</div>
+        <h3>See recent shop content</h3>
+        <p>Follow Mike's Barbershop on Instagram for a quick look at the shop and recent work.</p>
+        <a href={site.instagramUrl} target="_blank" rel="noreferrer">@barbershop.mike</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

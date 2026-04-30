@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../../site.json';
+---
+
+<BaseLayout title={`Services | ${site.businessName}`}>
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Services</div>
+        <h1>Sharp cuts, clean finishes, and a comfortable chair</h1>
+        <p>{site.ownerBlurb}</p>
+      </div>
+      <div class="grid">
+        {site.serviceList.map((service) => (
+          <article class="card">
+            <h2>{service}</h2>
+            <p>
+              Ideal for clients who want a clean, polished look with careful attention to detail,
+              modern technique, and a relaxed neighborhood-shop atmosphere.
+            </p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-muted">
+    <div class="container info-strip">
+      <article class="card">
+        <div class="eyebrow">What to expect</div>
+        <h3>Quality first</h3>
+        <p>Professional tools, a clean setup, and barbering focused on consistency, comfort, and style.</p>
+      </article>
+      <article class="card">
+        <div class="eyebrow">Neighborhood feel</div>
+        <h3>Easygoing and welcoming</h3>
+        <p>Clients mention the mellow vibe, fresh coffee, and being treated like family from the moment they walk in.</p>
+      </article>
+      <article class="card">
+        <div class="eyebrow">Family-friendly</div>
+        <h3>Good for kids too</h3>
+        <p>Mike's Barbershop is a comfortable local option for kids and adults alike.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,43 @@
+{
+  "businessName": "Mike's Barbershop",
+  "tagline": "Classic cuts, modern fades, and a relaxed neighborhood barbershop feel.",
+  "phone": "(224) 657-9922",
+  "email": "",
+  "cityState": "Northfield, Illinois",
+  "primaryColor": "#171717",
+  "accentColor": "#c59d5f",
+  "description": "Mike's Barbershop in Northfield, Illinois offers quality men's haircuts, fades, beard trims, and classic shaves in a clean, comfortable shop inside Northfield Village Center.",
+  "address": "300 N Happ Rd Unit 114, Northfield, IL 60093",
+  "locationNote": "Located in Northfield Village Center",
+  "directionsLabel": "Get directions",
+  "directionsUrl": "https://www.google.com/maps/search/?api=1&query=300+N+Happ+Rd+Unit+114,+Northfield,+IL+60093",
+  "instagramUrl": "https://www.instagram.com/barbershop.mike/",
+  "hoursNote": "Call for today's availability and walk-in timing.",
+  "highlights": [
+    "Good for kids",
+    "Restroom available",
+    "Easy local access in Northfield Village Center"
+  ],
+  "serviceList": [
+    "Men's haircuts",
+    "Skin fades and tapers",
+    "Beard trims and shape-ups",
+    "Classic hot-lather shaves"
+  ],
+  "reviews": [
+    {
+      "quote": "You will walk through the front door and be treated like family here.",
+      "author": "Joe Cwick"
+    },
+    {
+      "quote": "Location is easy, coffee is fresh, and the vibes are mellow.",
+      "author": "Scott Bagan"
+    },
+    {
+      "quote": "Super nice guy and gives a great haircut and an awesome shave.",
+      "author": "Michael Wilson"
+    }
+  ],
+  "ownerBlurb": "Mike's Barbershop offers a premium barbering experience focused on quality, comfort, and style. Every appointment is about helping clients leave looking sharp and feeling taken care of.",
+  "googleReviewSummary": "Locals praise the shop for its welcoming atmosphere, easy location, mellow vibe, and sharp cuts."
+}

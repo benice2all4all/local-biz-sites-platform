@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../../site.json';
+---
+
+<BaseLayout title={`Contact | ${site.businessName}`}>
+  <section>
+    <div class="container">
+      <div class="section-heading">
+        <div class="eyebrow">Contact</div>
+        <h1>Visit Mike's Barbershop in Northfield</h1>
+        <p>
+          For appointments, walk-in timing, or directions, give the shop a call and stop by Northfield Village Center.
+        </p>
+      </div>
+      <div class="grid contact-grid">
+        <article class="card">
+          <h2>Call</h2>
+          <p><a href={`tel:${site.phone}`}>{site.phone}</a></p>
+          <p>{site.hoursNote}</p>
+        </article>
+        <article class="card">
+          <h2>Address</h2>
+          <p>{site.address}</p>
+          <p>{site.locationNote}</p>
+          <p><a href={site.directionsUrl} target="_blank" rel="noreferrer">Get directions</a></p>
+        </article>
+        <article class="card">
+          <h2>Highlights</h2>
+          <ul class="detail-list compact">
+            {site.highlights.map((highlight) => (
+              <li>{highlight}</li>
+            ))}
+          </ul>
+        </article>
+        <article class="card">
+          <h2>Instagram</h2>
+          <p><a href={site.instagramUrl} target="_blank" rel="noreferrer">@barbershop.mike</a></p>
+          <p>Check the shop's Instagram for recent content and updates.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

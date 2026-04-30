@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import site from '../../site.json';
+---
+
+<BaseLayout title={`About | ${site.businessName}`}>
+  <section>
+    <div class="container about-layout">
+      <div>
+        <div class="eyebrow">About</div>
+        <h1>A neighborhood barbershop built on quality, comfort, and style</h1>
+        <p>{site.ownerBlurb}</p>
+        <p>
+          Located in Northfield Village Center, Mike's Barbershop is designed for clients who want a
+          reliable haircut experience without the rush. The shop blends classic barbering standards with
+          modern cuts, fades, beard work, and straight-ahead service that keeps people coming back.
+        </p>
+        <p>
+          Reviews consistently highlight the welcoming atmosphere, easy location, and the feeling of being
+          treated like family. It's the kind of local shop people recommend to friends, neighbors, and parents.
+        </p>
+      </div>
+      <aside class="card">
+        <div class="eyebrow">At a glance</div>
+        <ul class="detail-list">
+          <li><strong>Location:</strong> {site.locationNote}</li>
+          <li><strong>Address:</strong> {site.address}</li>
+          <li><strong>Phone:</strong> <a href={`tel:${site.phone}`}>{site.phone}</a></li>
+          <li><strong>Highlights:</strong> {site.highlights.join(', ')}</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
