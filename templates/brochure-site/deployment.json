@@ -1,0 +1,10 @@
+{
+  "siteSlug": "__SITE_SLUG__",
+  "pagesProjectName": "__SITE_SLUG__",
+  "productionBranch": "main",
+  "cloudflarePagesUrl": "https://__SITE_SLUG__.pages.dev",
+  "customDomain": "",
+  "status": "draft",
+  "lastDeployedAt": "",
+  "notes": ""
+}

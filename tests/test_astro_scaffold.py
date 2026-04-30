@@ -1,3 +1,4 @@
+import json
 import shutil
 import subprocess
 import tempfile
@@ -32,6 +33,26 @@ class AstroScaffoldTests(unittest.TestCase):
         self.assertTrue((site_root / "astro.config.mjs").exists())
         self.assertTrue((site_root / "src" / "pages" / "index.astro").exists())
         self.assertTrue((site_root / "src" / "layouts" / "BaseLayout.astro").exists())
+
+    def test_new_site_scaffolds_deployment_metadata(self):
+        script = self.worktree / "scripts" / "new_site.py"
+        subprocess.run(
+            ["python3", str(script), "acme-roofing", "Acme Roofing"],
+            cwd=self.worktree,
+            check=True,
+        )
+
+        deployment_path = self.worktree / "sites" / "active" / "acme-roofing" / "deployment.json"
+        self.assertTrue(deployment_path.exists())
+
+        deployment = json.loads(deployment_path.read_text(encoding="utf-8"))
+        self.assertEqual(deployment["siteSlug"], "acme-roofing")
+        self.assertEqual(deployment["pagesProjectName"], "acme-roofing")
+        self.assertEqual(deployment["productionBranch"], "main")
+        self.assertEqual(deployment["cloudflarePagesUrl"], "https://acme-roofing.pages.dev")
+        self.assertEqual(deployment["customDomain"], "")
+        self.assertEqual(deployment["status"], "draft")
+        self.assertEqual(deployment["lastDeployedAt"], "")
 
 
 if __name__ == "__main__":

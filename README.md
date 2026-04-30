@@ -43,6 +43,13 @@ Deploy a site with the repo-level helper:
 python3 scripts/deploy_site.py maple-street-plumbing
 ```
 
+List active sites and deployment metadata:
+
+```bash
+python3 scripts/site_inventory.py
+python3 scripts/site_inventory.py --format json
+```
+
 That creates:
 
 ```
@@ -52,10 +59,11 @@ sites/active/maple-street-plumbing/
 ## Recommended workflow
 
 1. Start each business site in `sites/active/<slug>/`
-2. Customize `site.json`, page copy, colors, images, and contact details
-3. Deploy each site to its own Cloudflare Pages project
-4. If a client needs full ownership later, move that folder into its own repo
-5. Archive inactive work under `sites/archived/`
+2. Customize `site.json`, `deployment.json`, page copy, colors, images, and contact details
+3. Use `python3 scripts/site_inventory.py` to track active site deployment status
+4. Deploy each site to its own Cloudflare Pages project
+5. If a client needs full ownership later, move that folder into its own repo
+6. Archive inactive work under `sites/archived/`
 
 ## Initial defaults
 
@@ -69,4 +77,4 @@ sites/active/maple-street-plumbing/
 - add shared content collections for testimonials and FAQs
 - add image optimization workflow
 - add contact-form integration patterns
-- add per-site domain metadata and deployment tracking
+- record successful deploy timestamps back into deployment metadata

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import shlex
 import subprocess
 import sys
@@ -20,6 +21,13 @@ def run_step(command: list[str], cwd: Path, dry_run: bool) -> None:
     if dry_run:
         return
     subprocess.run(command, cwd=cwd, check=True)
+
+
+def load_deployment_metadata(site_dir: Path) -> dict[str, str]:
+    deployment_path = site_dir / "deployment.json"
+    if not deployment_path.exists():
+        return {}
+    return json.loads(deployment_path.read_text(encoding="utf-8"))
 
 
 def parse_args() -> argparse.Namespace:
@@ -47,7 +55,8 @@ def main() -> int:
         print(f"Error: not an Astro/npm site: {site_dir}", file=sys.stderr)
         return 3
 
-    project_name = args.project_name or slug
+    deployment = load_deployment_metadata(site_dir)
+    project_name = args.project_name or deployment.get("pagesProjectName") or slug
 
     if not args.skip_install:
         run_step(["npm", "install"], cwd=site_dir, dry_run=args.dry_run)

@@ -17,6 +17,22 @@ Repo-level deploy helper:
 python3 scripts/deploy_site.py <slug>
 ```
 
+By default, the helper reads `sites/active/<slug>/deployment.json` and uses `pagesProjectName` as the Cloudflare Pages project name. Use `--project-name` to override it for a one-off deploy.
+
+Site inventory helper:
+
+```bash
+python3 scripts/site_inventory.py
+python3 scripts/site_inventory.py --format json
+```
+
+Each site should keep deployment metadata in `deployment.json`, including:
+- `pagesProjectName`
+- `cloudflarePagesUrl`
+- `customDomain`
+- `status`
+- `lastDeployedAt`
+
 Useful flags:
 - `--dry-run` prints the commands without executing them
 - `--project-name <name>` overrides the Cloudflare Pages project name
@@ -26,7 +42,7 @@ Useful flags:
 The deploy helper runs these steps from `sites/active/<slug>/`:
 - `npm install`
 - `npm run build`
-- `npx wrangler pages deploy dist --project-name <slug>`
+- `npx wrangler pages deploy dist --project-name <pagesProjectName>`
 
 Before first real deploy, authenticate Wrangler with Cloudflare:
 
